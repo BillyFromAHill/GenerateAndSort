@@ -12,10 +12,10 @@ namespace Generator
 
         static string fileName = "generated.txt";
 
-        static int generatorsCount = Environment.ProcessorCount;
-        static int bufferSizeBytes = 4096000;
-        static int buffersWritten = 0;
-        static int destinationSizeBytes = 1000000000;
+        static long generatorsCount = Environment.ProcessorCount;
+        static long bufferSizeBytes = 10960000;
+        static long buffersWritten = 0;
+        static long destinationSizeBytes = 10000000000;
 
         static List<Task> taskList = new List<Task>();
         static object syncRoot = new object();

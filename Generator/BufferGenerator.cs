@@ -7,9 +7,9 @@ namespace Generator
 {
     class BufferGenerator
     {
-        private readonly int bufferSize;
+        private readonly long bufferSize;
 
-        public BufferGenerator(int bufferSize)
+        public BufferGenerator(long bufferSize)
         {
             this.bufferSize = bufferSize;
         }
