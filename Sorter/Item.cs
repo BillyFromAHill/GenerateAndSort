@@ -2,10 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Generator
+namespace Sorter
 {
     public class Item
     {
+        // TODO: possibly replace by Parse.
+        public Item(string serialized)
+        {
+            var values = serialized.Split("-");
+            Number = int.Parse(values[0]);
+            Value = values[1];
+        }
 
         public Item(int number, string value)
         {
@@ -19,7 +26,7 @@ namespace Generator
 
         public override string ToString()
         {
-            return $"{ Number}-{Value}";
+            return $"{Number}-{Value}";
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Generator
 
         public int AddNext(Item item)
         {
-            stringBuilder.AppendLine($"{item.Number} - {item.Value} ");
+            stringBuilder.AppendLine(item.ToString());
 
             return stringBuilder.Length;
         }

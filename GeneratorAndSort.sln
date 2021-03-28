@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator", "Generator\Generator.csproj", "{5F5DEEF3-C653-448B-9DB1-DAF0126B2D6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generator", "Generator\Generator.csproj", "{5F5DEEF3-C653-448B-9DB1-DAF0126B2D6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorter", "Sorter\Sorter.csproj", "{4EC27136-7CF5-4BDA-9BE4-804A09F5F0DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5F5DEEF3-C653-448B-9DB1-DAF0126B2D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F5DEEF3-C653-448B-9DB1-DAF0126B2D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F5DEEF3-C653-448B-9DB1-DAF0126B2D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EC27136-7CF5-4BDA-9BE4-804A09F5F0DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EC27136-7CF5-4BDA-9BE4-804A09F5F0DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EC27136-7CF5-4BDA-9BE4-804A09F5F0DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EC27136-7CF5-4BDA-9BE4-804A09F5F0DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

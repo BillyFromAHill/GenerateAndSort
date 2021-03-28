@@ -15,7 +15,7 @@ namespace Generator
         static long generatorsCount = Environment.ProcessorCount;
         static long bufferSizeBytes = 10960000;
         static long buffersWritten = 0;
-        static long destinationSizeBytes = 10000000000;
+        static long destinationSizeBytes = 1000000000;
 
         static List<Task> taskList = new List<Task>();
         static object syncRoot = new object();
@@ -46,6 +46,7 @@ namespace Generator
                 lock (syncRoot)
                 {
 
+                    // TODO: better open file once.
                     File.AppendAllText(fileName, a.Result.CreateString());
                     buffersWritten++;
                     if (buffersWritten * bufferSizeBytes < destinationSizeBytes)
