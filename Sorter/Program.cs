@@ -38,7 +38,7 @@ namespace Sorter
             var mergeTaskList = new List<Task>();
             for (int i = 0; i < Environment.ProcessorCount; i++)
             {
-                mergeTaskList.Add(MergeFiles());
+                MergeFiles();
             }
 
             waitSorts.WaitOne();
@@ -142,6 +142,7 @@ namespace Sorter
                 File.Delete(secondFile);
                 filesToMerge.Add(mergedFile);
                 Interlocked.Decrement(ref workingCount);
+                GC.Collect();
             }).ContinueWith(task =>
             {
                 if (secondFile != null)
@@ -184,6 +185,7 @@ namespace Sorter
                 var fileName = $"{startPosition}-{startPosition + readCounter}.txt";
                 File.AppendAllLines(fileName, sorted);
                 filesToMerge.Add(fileName);
+                GC.Collect();
             }).ContinueWith(t =>
             {
                 if (readCounter > 0)
